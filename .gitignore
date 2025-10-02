@@ -8,3 +8,6 @@ secret_key.py
 env/
 venv/
 ENV/
+
+#Others
+__pycache__

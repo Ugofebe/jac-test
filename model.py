@@ -7,7 +7,7 @@ import chromadb
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_openai import ChatOpenAI
 from Inserting_files import load_pdf_to_strings, load_txt_to_strings
-from jac_functions import chunk_research_paper, search_research_db, insert_publications, answer_research_question
+from openai_jac_functions import chunk_research_paper, search_research_db, insert_publications, answer_research_question
 # model.py
 from dotenv import load_dotenv
 load_dotenv()

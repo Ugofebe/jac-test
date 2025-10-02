@@ -65,6 +65,7 @@ def chunk_research_paper(paper_content, title):
 
 # Embed chunked files
 
+
 def embed_documents(documents: list[str]) -> list[list[float]]:
     """
     Embed documents using a model.
@@ -81,7 +82,6 @@ def embed_documents(documents: list[str]) -> list[list[float]]:
 
     embeddings = model.embed_documents(documents)
     return embeddings
-
 
 # Insert the chunked and embedded files into chromaDB
 def insert_publications(collection: chromadb.Collection, publications: list[str], title ="doctest"):
