@@ -11,3 +11,7 @@ ENV/
 
 #Others
 __pycache__
+research_db copy
+insert_chroma_openai.py
+openai_jac_functions.py
+test.ipynb
