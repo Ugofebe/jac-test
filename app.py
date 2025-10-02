@@ -70,7 +70,9 @@ def ask_question(payload: QueryRequest):
     from langchain_huggingface import HuggingFaceEmbeddings
     from langchain_openai import ChatOpenAI
 
-    embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/paraphrase-MiniLM-L3-v2")
+    # embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/paraphrase-MiniLM-L3-v2")
+    embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+
     llm_gpt = ChatOpenAI(model_name='gpt-4o-mini', temperature=0.7)
     try:
         answer, sources = answer_research_question(
