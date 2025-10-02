@@ -17,6 +17,7 @@ from langchain_huggingface import HuggingFaceEmbeddings
 # from langchain_groq import ChatGroq
 from jac_functions import answer_research_question
 from langchain_openai import ChatOpenAI
+import uvicorn
 # openai_api_key = os.getenv("OPENAI_API_KEY")
 # Load environment variables
 load_dotenv()
@@ -86,3 +87,7 @@ def shutdown_event():
 @app.get("/")
 def home():
     return {"status": "ok", "message": "RAG API is running "}
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8000))  # Render sets PORT env var
+    uvicorn.run("app:app", host="0.0.0.0", port=port, reload=False)
