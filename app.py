@@ -15,7 +15,7 @@ from fastapi import FastAPI, Query
 from pydantic import BaseModel
 from langchain_huggingface import HuggingFaceEmbeddings
 # from langchain_groq import ChatGroq
-from openai_jac_functions import answer_research_question
+from jac_functions import answer_research_question
 from langchain_openai import ChatOpenAI
 # openai_api_key = os.getenv("OPENAI_API_KEY")
 # Load environment variables
